@@ -4,7 +4,8 @@ from .models import *
 # Create your views here.
 def index(request):
     context={
-        "blogs":Blog.objects.all()
+        "blogs":Blog.objects.all(),
+        "project":Project.objects.all()
     }
     return render(request, "index.html", context)
 

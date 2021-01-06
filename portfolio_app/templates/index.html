@@ -16,8 +16,13 @@
         
     </div>
     <div id="sites">
-        <h1>Projects</h1>
-        <h3><a href="">Sweet Petite Designs</a></h3>
+        <h1 style="text-decoration: underline;">Projects</h1>
+        {% for project in project %}
+        <h2>{{project.name}}</h2>
+        <h4>{{project.short_des}}</h4>
+        <img src="{{project.picture.url}}" alt="{{project.name}}">
+        {% endfor %}
+        <!-- <h3><a href="">Sweet Petite Designs</a></h3>
         <p>An e-commerce website designed to drive sales of a local, family bakery</p>
         <img src="{% static 'img/spd.png' %}" alt="Sweet Petite Designs Site">
         <h3><a href="">Community Church Finder</a></h3>
@@ -25,7 +30,7 @@
         <img src="{% static 'img/church_finder.png' %}" alt="Church Finder Site">
         <h3><a href="">Metroidvania Game</a></h3>
         <p>Python (PyGame) 2D side scrolling game</p>
-        <img src="{% static 'img/metroidvania.png' %}" alt="Metroidvania Game">
+        <img src="{% static 'img/metroidvania.png' %}" alt="Metroidvania Game"> -->
     </div>
     <div id="personal">
         <h1>About Me</h1>
