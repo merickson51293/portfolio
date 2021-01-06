@@ -21,4 +21,8 @@ def blog_post(request, blog_id):
     }
     return render(request, "blog_post.html", context)
 
-    
+def proj_page(request, project_id):
+    context={
+        "project":Project.objects.get(id=project_id)
+    }
+    return render(request, "proj_page.html", context)

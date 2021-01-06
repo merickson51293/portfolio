@@ -12,13 +12,13 @@
     <div id="top">
         <h1>Welcome to Michael Erickson's Portfolio</h1>
         <h4>Email Address: Merickson51293@gmail.com | Phone Number: 248-798-3461</h4>
-        <h3><a href="">Resume</a> - <a href="https://www.linkedin.com/in/michael-erickson512/">LinkedIn</a> - <a href="https://github.com/merickson51293">GitHub</a></h3>
+        <h3><a href="">Resume</a> - <a href="https://www.linkedin.com/in/michael-erickson512/" target="blank">LinkedIn</a> - <a href="https://github.com/merickson51293" target="blank">GitHub</a></h3>
         
     </div>
     <div id="sites">
         <h1 style="text-decoration: underline;">Projects</h1>
         {% for project in project %}
-        <h2>{{project.name}}</h2>
+        <a href="/proj_page/{{project.id}}"><h2>{{project.name}}</h2></a>
         <h4>{{project.short_des}}</h4>
         <img src="{{project.picture.url}}" alt="{{project.name}}">
         {% endfor %}

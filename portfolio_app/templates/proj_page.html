@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>{{project.name}} Project</title>
+    <link rel="stylesheet" href="{% static 'css/proj_page.css' %}">
+    <link rel="shortcut icon" href="{{project.picture.url}}">
+</head>
+<body>
+    <a href="/">Home</a>
+    <div id="title">
+        <h1>{{project.name}}</h1>
+        <p>{{project.short_des}}</p>
+        <img src="{{project.picture.url}}" alt="{{project.name}}" style="width: 75%;">
+        <p>Technology Used: {{project.tech_used}}</p>
+        <p>Description: {{project.description}}</p>
+    </div>
+    <div id="blog">
+        <h2>Blog posts about {{project.name}}</h2>
+        <p>{{blogs.post}}</p>
+    </div>
+</body>
+</html>
