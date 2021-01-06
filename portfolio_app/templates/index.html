@@ -11,14 +11,28 @@
 <body>
     <div id="top">
         <h1>Welcome to Michael Erickson's Portfolio</h1>
+        <h4>Email Address: Merickson51293@gmail.com | Phone Number: 248-798-3461</h4>
         <h3><a href="">Resume</a> - <a href="https://www.linkedin.com/in/michael-erickson512/">LinkedIn</a> - <a href="https://github.com/merickson51293">GitHub</a></h3>
+        
     </div>
     <div id="sites">
+        <h1>Projects</h1>
         <h3><a href="">Sweet Petite Designs</a></h3>
+        <p>An e-commerce website designed to drive sales of a local, family bakery</p>
+        <img src="{% static 'img/spd.png' %}" alt="Sweet Petite Designs Site">
         <h3><a href="">Community Church Finder</a></h3>
+        <p>A social media application to help churches and local residents find each other</br> based on user experience and church preferences.</p>
+        <img src="{% static 'img/church_finder.png' %}" alt="Church Finder Site">
         <h3><a href="">Metroidvania Game</a></h3>
+        <p>Python (PyGame) 2D side scrolling game</p>
+        <img src="{% static 'img/metroidvania.png' %}" alt="Metroidvania Game">
     </div>
-    <div id="blog">
+    <div id="personal">
+        <h1>About Me</h1>
+        <img src="{% static 'img/family.jpeg' %}" alt="Family Picture">
+        <p>My name is Michael Erickson, a 27 year old father of the most incredible daughter, Jane, and husband to a wonderful woman, Megan. I am also a recent graduate of a coding bootcamp (Coding Dojo). I spent 14 weeks in an intensive program working mainly on Python. We started with Web Fundamentals (HTML, CSS, JavaScript, jQuery) and then dove deep into Python. After which we worked on projects to show our skills and all that we had learned. To the left you will find projects that were both personal passion projects and bootcamp assigned projects. </p>
+        <p>I am very excited to jump into the tech field and learn so much more! While I might not have a four year computer science degree, I do have wonderful people skills and a drive to be the best I can be. Please feel free to contact me with the information above. I am excited to talk to you about my projects, who I am and what I can bring to the table.</p>
+        <h1>Blog</h1>
         {% for blogs in blogs %}
         <a href="/blog_post/{{blogs.id}}">{{blogs.title}}</a> - {{blogs.created_at}}
         {% endfor %}
