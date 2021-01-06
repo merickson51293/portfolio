@@ -1,0 +1,16 @@
+#top{
+    text-align: center;
+}
+
+#sites{
+    display: inline-block;
+    width: 40%;
+    padding-left: 5%;
+}
+
+#blog{
+    display: inline-block;
+    width: 40%;
+    padding-left: 5%;
+    text-align:right;
+}

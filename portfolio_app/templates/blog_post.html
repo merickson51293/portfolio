@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>{{blogs.title}}</title>
+</head>
+<body>
+    <div id="title">
+        <h2>{{blogs.title}}</h2>
+        <a href="/">Portfolio Home</a>
+        <p>{{blogs.created_at}}</p>
+    </div>
+    <div id="post">
+        <p>{{blogs.post}}</p>
+    </div>
+</body>
+</html>

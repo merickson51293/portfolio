@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Erickson's Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
 </head>
 <body>
-    <h1>Welcome to Michael Erickson's Portfolio</h1>
-    <a href="/blog">Blog</a>
+    <div id="top">
+        <h1>Welcome to Michael Erickson's Portfolio</h1>
+        <h3><a href="">Resume</a> - <a href="https://www.linkedin.com/in/michael-erickson512/">LinkedIn</a> - <a href="https://github.com/merickson51293">GitHub</a></h3>
+    </div>
+    <div id="sites">
+        <h3><a href="">Sweet Petite Designs</a></h3>
+        <h3><a href="">Community Church Finder</a></h3>
+        <h3><a href="">Metroidvania Game</a></h3>
+    </div>
+    <div id="blog">
+        {% for blogs in blogs %}
+        <a href="/blog_post/{{blogs.id}}">{{blogs.title}}</a> - {{blogs.created_at}}
+        {% endfor %}
+    </div>
 </body>
 </html>
