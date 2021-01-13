@@ -1,0 +1,108 @@
+* {box-sizing:border-box}
+
+div#wrapper{
+    padding: 5px;
+    background-color:white;	
+}
+
+#logo{
+    margin-left: 36%;
+}
+
+h2{
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    border: white 2px solid;
+    border-radius: 5px;
+    background-color: white;
+    color:black;
+}
+
+h2:hover{
+  background-color: #adcf9d;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+div#nav{
+    text-align: center;
+    background-color: #93c47d;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+div#main{
+    
+    height: 1000px;
+    border-radius: 10px;
+}
+
+#welcome{
+    /* padding-top: 8%; */
+    display: inline-block;
+    width: 80%;
+
+    margin-left: 10%;
+}
+
+#welcome > h1{
+    color: white;
+    background-color: black;
+    padding: 2%;
+    border-radius: 10px;
+    /* opacity: 80%; */
+}
+
+#slideshow > img{
+    width: 50%;
+    height: 700px;
+    MARGIN-left: 25%;
+}
+
+#aboutme{
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    vertical-align: top;
+    margin-left: 2%;
+}
+
+#aboutme > img{
+    width: 60%;
+}
+
+div#best{
+    display: inline-block;
+    width: 45%;
+    margin-left: 5%;
+}
+
+#goods > img{
+    margin: 10px;
+    width: 75%;
+}
+    
+#goods{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 10px;
+}
+#one{
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#one > button{
+    font-size: 30px;
+}
+
+#one > button:hover{
+    background-color: #93c47d;
+}

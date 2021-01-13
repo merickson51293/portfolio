@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Church</title>
+    {% load static %}
+</head>
+<body>
+    <h1>Edit {{one_user.first_name}} {{one_user.last_name}}'s page</h1>
+    <form action="/user_edit/{{request.session.user_id}}" method="post">
+        {% csrf_token %}
+    Address: <input type="text" name="user_address" value="{{one_user.user_address}}"></br>
+    City <input type="text" name="user_city" value="{{one_user.user_city}}"></br>
+    State: <input type="text" name="user_state" value="{{one_user.user_state}}"></br>
+    Facebook: <input type="text" name="user_facebook" value="{{one_user.user_facebook}}"></br>
+    Instagram: <input type="text" name="user_instagram" value="{{one_user.user_instagram}}"></br>
+    Number of Adults: <input type="text" name="adults" value="{{one_user.adults}}"></br>
+    Number of Teens: <input type="text" name="teens" value="{{one_user.teens}}"></br>
+    Number of Children: <input type="text" name="kids" value="{{one_user.kids}}"></br>
+    Phone Number: <input type="text" name="user_phone" value="{{one_user.user_phone}}"></br>
+    Denomination: <input type="text" name="denomination" value="{{one_user.denomination}}"></br>
+    Preferred Size: <input type="text" name="church_size" value="{{one_user.church_size}}"></br>
+    Importance of Student Programs: <input type="text" name="student_programs" value="{{one_user.student_programs}}"></br>
+    Importance of Small Groups: <input type="text" name="small_groups" value="{{one_user.small_groups}}"></br>
+    Other: <input type="text" name="user_info_other" value="{{one_user.user_info_other}}"></br>
+    <input type="submit" value="Edit">
+    </form>
+</body>
+</html>

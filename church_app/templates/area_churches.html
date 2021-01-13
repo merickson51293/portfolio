@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    {% block content %}
+    <link rel="stylesheet" href="{% static 'home_page.css' %}">
+</head>
+<body>
+    <h3>Local Area Churches</h3>
+    {% for church in area_church %}
+    <h4><a href="/church_profile/{{church.id}}">{{church.church_name}}</a></h4>
+    <p>Location: {{church.church_city}}, {{church.church_state}}</p>
+    <p>Denomination: {{church.denomination}}</p>
+    {% endfor %}
+    {% endblock %}
+</body>
+</html>

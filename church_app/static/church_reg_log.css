@@ -1,0 +1,56 @@
+#wrapper{
+    padding: 5px;
+}
+
+div#header{
+    border-bottom: black solid 2px;
+}
+
+h1{
+    display: inline-block;
+    margin-right: 55%;
+}
+
+h3{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+div#reg{
+    display:inline-block;
+    text-align: center;
+    border: solid black 2px;
+    border-collapse: collapse;
+    padding: 20px;
+    padding-top: 0px;
+    margin-left: 25%;
+}
+
+div#header > a{
+    text-decoration: none;
+}
+
+div#login{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    border: solid black 2px;
+    border-collapse: collapse;
+    padding: 20px;
+    padding-top: 0px;
+
+    margin-left: 10%;
+}
+
+p#small{
+    font-size: 15px;
+}
+
+#reg_form{
+    margin: 5px;
+}
+
+#login_form{
+    margin: 5px;
+}

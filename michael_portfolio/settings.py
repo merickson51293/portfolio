@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'portfolio_app',
+    'sweet_petite_app',
+    'church_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

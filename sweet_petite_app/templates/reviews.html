@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews of Sweet Petite</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/reviews.css' %}">
+    <link rel="shortcut icon" href="{% static 'imgs/favicon.png' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="/"><img id="logo" src="{% static 'imgs/logo.png' %}" alt="SPD Logo"></a>
+        </div>
+        <div id="nav">
+            <a href="/"><h2>Home</h2></a>
+            <a href="/menu"><h2>Menu</h2></a>
+            <a href="/reviews"><h2 style="background-color:#797979">Reviews</h2></a>
+            <a href="/photos"><h2>Photo Gallery</h2></a>
+            <a href="/contact"><h2>Contact</h2></a>
+            <a href="/blog"><h2>Blog</h2></a>
+            <a href="/order"><h2>Order</h2></a>
+        </div>
+        <div id="top_left">
+            <h3>Reviews of Sweet Petite Designs</h3>
+            {% for review in reviews %}
+            <p>"{{review.review}}"</p>
+        <p>- {{review.name}}</p>
+            {% endfor %}
+        </div>
+        <div id="review_form">
+            <div id="form">
+                <h4>Please Leave a Review</h4></br>
+                <form action="/add_review" method="post">
+                    {% csrf_token %}
+                    Name: <input type="text" name="name" class="center"></br></br>
+                    <textarea name="review" cols="50" rows="10"></textarea></br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="pic">
+                <img src="{% static 'imgs/debbie-review.jpg' %}" alt="Happy Customer" style="width: 50%;">
+            </div>
+        </div>
+       
+           
+
+        <div id="footer">
+            <p>Connect with us: <a href="https://www.instagram.com/sweetpetite_designs/" target="_blank"><img src="{% static 'imgs/instagram.png' %}" alt='instagram' style="width: 50px; height: 50px;"></a> <a href="https://www.facebook.com/sweetpetitedesigns1/" target="_blank"><img src="{% static 'imgs/facebook.png' %}" alt="facebook" style="width: 50px; height: 50px;"></a></p>
+        </div>
+    </div>
+</body>
+</html>

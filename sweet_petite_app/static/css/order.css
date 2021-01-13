@@ -1,0 +1,94 @@
+* {box-sizing:border-box}
+
+div#wrapper{
+    padding: 5px;
+    background-color:white;	
+}
+
+#logo{
+    margin-left: 36%;
+}
+
+h2{
+    display: inline-block;
+    width: 10%;
+    text-align: center;
+    border: white 2px solid;
+    border-radius: 5px;
+    background-color: white;
+    color:black;
+}
+
+h2:hover{
+  background-color: #adcf9d;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+div#nav{
+    text-align: center;
+    background-color: #93c47d;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#order{
+    text-align: center;
+}
+#number{
+    width:10%;
+}
+
+.reveal-if-active {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    font-size: 16px;
+    transform: scale(0.8);
+    transition: 0.5s;
+    
+    label {
+      display: block;
+      margin: 0 0 3px 0;
+    }
+    input[type=text] {
+      width: 100%;
+    }
+    
+    input[type="radio"]:checked ~ &,
+    input[type="checkbox"]:checked ~ & {
+      opacity: 1;
+      max-height: 100px;
+      padding: 10px 20px;
+      transform: scale(1);
+      overflow: visible;
+    }
+    
+  }
+
+#cart{
+    display: block;
+    margin-left: 90%;
+}
+
+#checkout-button{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#checkout-button:hover{
+    background-color: #93c47d;
+}
+
+#cart_button{
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+#cart_button:hover{
+    background-color: #93c47d;
+}

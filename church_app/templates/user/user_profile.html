@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church Profile</title>
+    {% load static %}{% block content %}
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
+</head>
+<body>
+    
+    <div id="profilepic">
+        <img id="profile" src="{% static '/profile_pic.png' %}" alt="profile pic">
+        <h2>{{one_user.first_name}} {{one_user.last_name}}</h2>
+    </div>
+    <div id="user_info">
+        <div id="info_one">
+            <h3>User Info</h3>
+            <p>City and State: {{one_user.user_city}}, {{one_user.user_state}}</p>
+            <p>Breakdown of Family</p>
+            <p>Adults: {{one_user.adults}}</p>
+            <p>Teenagers: {{one_user.teens}}</p>
+            <p>Kids: {{one_user.kids}}</p>
+        </div>
+        <div id="info_two">
+            <h3>Social Media</h3>
+            <p>Facebook: <a href="https://www.{{one_user.user_facebook}}">{{one_user.user_facebook}}</a></p>
+            <p>Instagram: {{one_user.user_instagram}}</p>
+        </div>
+        <div id="info_three">
+            <h3>Church Preference</h3>
+            <p>Prefered Denomination: {{one_user.denomination}}</p>
+            <p>Prefered Size: {{one_user.church_size}}</p>
+            <p>Importance of student programs: {{one_user.student_programs}}/100</p>
+            <p>Importance of small groups: {{one_user.small_groups}}/100</p>
+                {% if one_user.id == request.session.user_id %}
+                <a href="/edit_user/{{one_user.id}}">Edit Your User</a>
+                {% endif %}
+            </div>
+        </div>
+            {% if request.session.user_id is none %}
+            <div id="user_wall">
+                <h3><a href="/direct_messages/{{one_user.id}}">Leave a direct message for {{one_user.first_name}} {{one_user.last_name}}!</a></h3>
+            </div>
+            {% endif %}
+    
+    {% endblock %}
+</body>
+</html>

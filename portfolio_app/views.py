@@ -26,3 +26,9 @@ def proj_page(request, project_id):
         "project":Project.objects.get(id=project_id)
     }
     return render(request, "proj_page.html", context)
+
+def spd(request):
+    return render(request, "indexspd.html")
+
+def church_finder(request):
+    return render(request, "indexchurch.html")

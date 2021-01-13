@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'guest.css' %}">
+</head>
+<body>
+    <div id="main" style="background-image: url({% static '/service.jpg' %})">
+        <h1 style="background-color:white">Welcome to Community Church Finder</h1>
+        <button id="church"><a href="/church_reg_log">Church Registration/Login</a></button>
+        <button><a href="/user_reg">User Registration/Login</a></button>
+        <div id="info">
+    <h2>Find A Service Near You</h1>
+    <h3>If you are looking for a church near you, please let us know where you are and we will give you some churches in your local area.</h3>
+    <form action="" method="post">
+        <p>Zip Code: <input type="text" name="zip"></p>
+        <input type="submit" value="Find My Church">
+    </form>
+</div>
+</div>
+</body>
+</html>

@@ -7,3 +7,7 @@
 #title > img{
     border: black 2px solid;
 }
+
+button{
+    font-size: 25px;
+}

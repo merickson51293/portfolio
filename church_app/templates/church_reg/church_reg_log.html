@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Church Finder</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'church_reg_log.css' %}">
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <h1>Community Church Finder</h1>
+        <a href="/user_reg">User Registration and Login</a>
+    </div>
+    <h3>Looking for new members? Want more people to know about your church? Community Church finder is made to match churches and prospective members in the easiest way possible!</h3>
+    <div id="reg">
+        <h2>Church Registration</h2>
+        
+        <form action="/create_church" method="post">
+            {% csrf_token %}
+            Church Name:<input type="text" name="church_name"id="reg_form"></br>
+            Admin Name:<input type="text" name="admin_name"id="reg_form"></br>
+            Admin Email Address:<input type="email" name="admin_email"id="reg_form"></br>
+            Password:<input type="password" name="password"id="reg_form"></br>
+            Confirm Password:<input type="password" name="conf_password"id="reg_form"></br>
+            <input type="submit" value="Register"id="reg_form">
+            <p id="small"><i>Password must be 8 characters long</i></p>
+        </form>
+    </div>
+    <div id="login">
+        <h2>Church Login</h2>
+        <form action="/church_login" method="post" id="login_form">
+            {% csrf_token %}
+            Admin Email: <input type="email" name="admin_email" id="login_form"></br>
+            Password: <input type="password" name="password"id="login_form"></br>
+            <input type="submit" value="Login"id="login_form">
+        </form>
+    </div>
+    {% if messages %}
+        {% for error in messages %}
+        <p id="errors">{{error}}</p>
+        {% endfor %}
+    {% endif %}
+</div>
+</body>
+</html>
