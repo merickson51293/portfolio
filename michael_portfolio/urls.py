@@ -24,6 +24,6 @@ urlpatterns = [
     path('', include ("portfolio_app.urls")),
     path('sweet_petite/', include ("sweet_petite_app.urls")),
     path('church_finder/', include ('church_app.urls'))
-]
-if settings.DEBUG: # new
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG: # new
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
