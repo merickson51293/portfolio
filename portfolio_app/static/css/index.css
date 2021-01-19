@@ -14,7 +14,12 @@
     border: black 1px solid;
 }
 
-
+#slideshow > img{
+    padding-top: 50px;
+    width: 50%;
+    height: 500px;
+    MARGIN-left: 25%;
+}
 
 #personal{
     display: inline-block;
