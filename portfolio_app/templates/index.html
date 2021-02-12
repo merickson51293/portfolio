@@ -15,19 +15,6 @@
         <h3><a href="https://www.linkedin.com/in/michael-erickson512/" target="blank">LinkedIn</a> - <a href="https://github.com/merickson51293" target="blank">GitHub</a></h3>
         
     </div>
-    <div id="slideshow">
-        <img class="mySlides" src="{% static 'img/spd.png' %}">
-        <img class="mySlides" src="{% static 'img/church_finder.png' %}">
-        <img class="mySlides" src="{% static 'img/metroidvania.png' %}">
-    </div>
-    <div id="sites">
-        <h1 style="text-decoration: underline;">Projects</h1>
-        {% for project in project %}
-        <a href="/proj_page/{{project.id}}"><h2>{{project.name}}</h2></a>
-        <h4>{{project.short_des}}</h4>
-     
-        {% endfor %}
-    </div>
     <div id="personal">
         <h1>About Me</h1>
         <img src="{% static 'img/family.jpeg' %}" alt="Family Picture">
@@ -37,6 +24,20 @@
         {% for blogs in blogs %}
         <a href="/blog_post/{{blogs.id}}">{{blogs.title}}</a> - {{blogs.created_at}}
         {% endfor %}
+    </div>
+    <div id="sites">
+        <h1 style="text-decoration: underline;">Projects</h1>
+        {% for project in project %}
+        <a href="/proj_page/{{project.id}}"><h2>{{project.name}}</h2></a>
+        <h4>{{project.short_des}}</h4>
+     
+        {% endfor %}
+    </div>
+    
+    <div id="slideshow">
+        <img class="mySlides" src="{% static 'img/spd.png' %}">
+        <img class="mySlides" src="{% static 'img/church_finder.png' %}">
+        <img class="mySlides" src="{% static 'img/metroidvania.png' %}">
     </div>
     <script>
         var slideIndex = 0;
