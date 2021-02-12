@@ -9,6 +9,9 @@ from django.db.models import Sum
 
 
 # Create your views here.
+def home(request):
+    return render(request, "home.html")
+    
 def index(request):
     context={
         "blogs":Blog.objects.all(),
