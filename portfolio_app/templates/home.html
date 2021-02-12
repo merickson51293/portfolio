@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/family.jpeg' %}">
 </head>
 <body>
-    <h1>Welcome to <b>MICHAEL ERICKSON'S</b> Portfolio</h1>
+    <div id="main">
+        <div id="welcome">
+            <h1>Welcome to <b>MICHAEL ERICKSON'S</b> Portfolio</h1>
+            <h2>Thank you for looking at my portfolio and please reach out to me if you have any questions at all!</h2>
+        </div>
+        <div id="buttons">
+            <button>Home</button>
+            <button>About Me</button>
+            <button>My Work</button>
+            <button>Contact Me</button>
+        </div>
+    </div>
 </body>
 </html>
